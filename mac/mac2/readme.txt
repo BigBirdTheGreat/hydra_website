@@ -1,0 +1,1 @@
+Hi, I am not sure if you are seeing this or not. If not then good. If so then I hate configuring servers and am most likely suffering from a migraine. You should most likely see a .dmg file. Extract all of the files to see how prevalent the issue is and then run each of the files. After this please report back to me. Thanks again.

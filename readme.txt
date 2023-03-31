@@ -1,0 +1,1 @@
+If you are seeing this that means that the server is misconfigured. There are most likely 2 files, open the one with the name of the operating system you have. If you don't then nothing will work a you won't be able to properly tell me how many of my files are at risk. Thank you!
