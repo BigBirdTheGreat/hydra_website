@@ -1,1 +1,1 @@
-If you are seeing this that means that the server is misconfigured. There are most likely a lot of files, open the one with the names of the operating system you have. If you don't then nothing will work a you won't be able to properly tell me how many of my files are at risk. Btw for macOS you will need to move all of the files from each .dmg file into a different folder like downloads, etc, and then run them. Thanks!
+This was used to help deliver Hydra (April 1, 2023)
